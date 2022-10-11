@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "date": "2017-01-01",
+        "weather": "raiiny",
+        "visibility": "poor",
+        "comment": "Pretty scary flight, I'm glad I'm alive"
+    }
+]
