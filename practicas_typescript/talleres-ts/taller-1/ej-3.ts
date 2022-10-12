@@ -2,8 +2,7 @@
 let numberArray:Array<number>=[10, 15, 64, 44, 53];
 
 for(let i=0; i<numberArray.length; i++){
-  console.log(numberArray[i]);
-  
+  console.log(numberArray[i])  
 }
 
 // ● Una variable array de strings que contenga cinco elementos e imprima cada uno de sus elementos.
@@ -11,15 +10,13 @@ let stringArray:Array<string>=['valores', 'de', 'array', 'de', 'strings'];
 
 for(let i=0; i<stringArray.length; i++){
   console.log(stringArray[i]);
-  
 }
 
 // ● Recorra cada array creado usando for-of e imprimiendo cada uno de sus elementos
 const iterableArray:Array<any>=['valores', 'de', 'array', 'de', 'strings', 10, 15, 64, 44, 53];
 
 for(const value of iterableArray){
-  console.log(value);
-  
+  console.log(value);  
 }
 
 // Investigue: cómo eliminar elementos de un array, agregar elementos, leer y actualizar elementos.
@@ -52,8 +49,6 @@ console.log(mutableArray);
 for(let i=0; i<mutableArray.length; i++){
   console.log(mutableArray[i]);
 }
-
-
 //actualizar elementos de un array
 mutableArray.splice(4, 1, 'valor actualizado')
 console.log(mutableArray);
