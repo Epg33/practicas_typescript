@@ -13,7 +13,7 @@ let secondString = 'another string';
 // registrarse en nuestro sitio, por ejemplo. “Bienvenida Paula Pérez a nuestro sitio web, gracias por
 // registrarte”. Este template debe usar dos variables, nombres y apellidos
 function personName(firstName, lastName) {
-    const fullName = `Bienvenida ${firstName} ${lastName} a nuestro sitio web, gracias por
+    const fullName = `Bienvenido/a ${firstName} ${lastName} a nuestro sitio web, gracias por
   registrarte`;
     return fullName;
 }
