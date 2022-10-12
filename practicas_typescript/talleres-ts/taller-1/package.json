@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev index.ts",
     "tsc": "tsc",
-    "start": "ts-node index.ts"
+    "start": "ts-node ej-1.ts"
   },
   "author": "",
   "license": "ISC",

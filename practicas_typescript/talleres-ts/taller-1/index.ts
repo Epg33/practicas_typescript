@@ -1,2 +1,3 @@
-console.log('hello world');
-let umber :number = 10; 
+import xd from "./ej-4";
+
+xd()
