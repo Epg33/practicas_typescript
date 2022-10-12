@@ -33,17 +33,27 @@ let mutableArray:Array<any> =['valores', 'de', 'array', 'de', 'strings', 10, 15,
 console.log(mutableArray);
 
 //eliminar elemento del primer index del array
-
+mutableArray.shift()
+console.log(mutableArray);
 
 //eliminar elemento del ultimo index del array
-
+mutableArray.pop()
+console.log(mutableArray);
 
 //agregar elemento del primer index del array
-
+mutableArray.unshift('primer index')
+console.log(mutableArray);
 
 //agregar elemento del ultimo index del array
-
+mutableArray.push('ultimo index');
+console.log(mutableArray);
 
 //leer cada elemento de un array
+for(let i=0; i<mutableArray.length; i++){
+  console.log(mutableArray[i]);
+}
+
 
 //actualizar elementos de un array
+mutableArray.splice(4, 1, 'valor actualizado')
+console.log(mutableArray);
