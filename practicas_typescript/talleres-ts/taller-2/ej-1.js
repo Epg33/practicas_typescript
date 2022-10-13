@@ -16,6 +16,10 @@ const suma = function (num1, num2) {
 console.log(suma(5, 5));
 // ● Use setTimeOut para implementar un callback que se llame a los 5 segundos e imprima por consola el
 // mensaje “HOLA ADSI”
+const saludar = (ficha) => {
+    return `HOLA ADSI ${ficha}`;
+};
+setTimeout(saludar(2448515), 5000);
 // ● Cree una función flecha sin argumentos que imprima “Hola ADSI”.
 // ● Cree una función flecha que tenga como parámetro edad y retorne un string que le diga al usuario cuál
 // fue la edad pasada como argumento, imprima el valor devuelto por la función. Use paréntesis para el

@@ -21,7 +21,11 @@ console.log(suma(5,5));
 
 // ● Use setTimeOut para implementar un callback que se llame a los 5 segundos e imprima por consola el
 // mensaje “HOLA ADSI”
+const saludar = (ficha:number):any =>{
+  return `HOLA ADSI ${ficha}`
+}
 
+setTimeout(saludar(2448515), 5000)
 
 // ● Cree una función flecha sin argumentos que imprima “Hola ADSI”.
 
