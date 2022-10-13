@@ -21,6 +21,10 @@ const saludar = (ficha) => {
 };
 setTimeout(saludar(2448515), 5000);
 // ● Cree una función flecha sin argumentos que imprima “Hola ADSI”.
+const hiAdsi = () => {
+    console.log('HOLA ADSI');
+};
+hiAdsi();
 // ● Cree una función flecha que tenga como parámetro edad y retorne un string que le diga al usuario cuál
 // fue la edad pasada como argumento, imprima el valor devuelto por la función. Use paréntesis para el
 // parámetro y omita la palabra reservada return.
