@@ -1,5 +1,6 @@
-"use strict";
 // ● Dos variables lógicas
+let firstBool = true;
+let secondBool = false;
 // ● Dos variables numéricas
 let firstNumber = 10;
 let secondNumber = 20;

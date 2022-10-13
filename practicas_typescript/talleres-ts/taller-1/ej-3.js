@@ -1,4 +1,3 @@
-"use strict";
 // ● Una variable array de números que contenga cinco elementos e imprima cada uno de sus elementos.
 let numberArray = [10, 15, 64, 44, 53];
 for (let i = 0; i < numberArray.length; i++) {

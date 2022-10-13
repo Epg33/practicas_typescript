@@ -1,4 +1,6 @@
 // ● Dos variables lógicas
+let firstBool:boolean = true;
+let secondBool:boolean = false;
 
 // ● Dos variables numéricas
 let firstNumber:number = 10;

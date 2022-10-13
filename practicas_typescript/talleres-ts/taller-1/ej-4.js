@@ -1,4 +1,3 @@
-"use strict";
 // ● Una variable tipo objeto cuyos valores sean los días de la semana
 const weekDays = {
     firstDay: "lunes",
@@ -24,8 +23,8 @@ const numbers = {
 };
 // ● Recorra cada objeto creado usando for-in e imprimiendo cada uno de sus valores
 let days = Object.values(weekDays);
-for (let day in days) {
-    console.log(day);
+for (let day in weekDays) {
+    console.log(weekDays[day]);
 }
 for (let number in numbers) {
     console.log(number);
