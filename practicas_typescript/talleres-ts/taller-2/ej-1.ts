@@ -21,11 +21,11 @@ console.log(suma(5,5));
 
 // ● Use setTimeOut para implementar un callback que se llame a los 5 segundos e imprima por consola el
 // mensaje “HOLA ADSI”
-const saludar = (ficha:number):any =>{
-  return `HOLA ADSI ${ficha}`
+function saludar(ficha:number):any{
+  console.log(`HOLA ADSI ${ficha}`)
 }
 
-setTimeout(saludar(2448515), 5000)
+setTimeout(function(){saludar(2448515)}, 5000)
 
 // ● Cree una función flecha sin argumentos que imprima “Hola ADSI”.
 const hiAdsi = ():any =>{
@@ -37,6 +37,7 @@ hiAdsi();
 // ● Cree una función flecha que tenga como parámetro edad y retorne un string que le diga al usuario cuál
 // fue la edad pasada como argumento, imprima el valor devuelto por la función. Use paréntesis para el
 // parámetro y omita la palabra reservada return.
+
 
 
 // ● Cree una función flecha que tenga como parámetros dos números y retorne el producto de éstos,
