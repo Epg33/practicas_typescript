@@ -11,7 +11,7 @@ const weekDays = {
 };
 // ● Una variable tipo objeto cuyos valores sean los números del 0 al 9
 const numbers = {
-    cero: 0,
+    0: 0,
     1: 1,
     2: 2,
     3: 3,
@@ -23,12 +23,41 @@ const numbers = {
     9: 9,
 };
 // ● Recorra cada objeto creado usando for-in e imprimiendo cada uno de sus valores
-for (const [key, value] in Object.entries(weekDays)) {
-    console.log(key, ':', value);
+let days = Object.values(weekDays);
+for (let day in days) {
+    console.log(day);
 }
-for (const number in numbers) {
+for (let number in numbers) {
     console.log(number);
 }
 // Investigue: cómo eliminar elementos clave-valor de un objeto, cómo leer y actualizar valores. Implemente ejemplos prácticos.
-//eliminar 
+//eliminar
 // Investigue: Ciclos for y while en TypeScript. Implemente ejemplos prácticos
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        }
+        else {
+            console.log("fizz");
+        }
+    }
+    else if (i % 5 === 0) {
+        console.log("buzz");
+    }
+    else {
+        console.log(i);
+    }
+}
+let whileIterable = 0;
+const random = Math.round(Math.random() * 1000);
+while (whileIterable <= random) {
+    if (random - whileIterable == 0) {
+        console.log("pasos:", whileIterable);
+        whileIterable += 1;
+    }
+    else {
+        console.log(`a ${random - whileIterable} del final`);
+        whileIterable += 1;
+    }
+}
