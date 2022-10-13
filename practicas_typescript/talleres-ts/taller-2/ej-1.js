@@ -10,6 +10,10 @@ const params = (count, thing = 'producto', exist) => {
 console.log(params(15, 'cama', true));
 // ● Cree una variable tipo función que tenga como parámetros dos números y retorne su suma, haga el
 // llamado a la función.
+const suma = function (num1, num2) {
+    return num1 + num2;
+};
+console.log(suma(5, 5));
 // ● Use setTimeOut para implementar un callback que se llame a los 5 segundos e imprima por consola el
 // mensaje “HOLA ADSI”
 // ● Cree una función flecha sin argumentos que imprima “Hola ADSI”.
