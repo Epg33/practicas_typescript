@@ -44,11 +44,17 @@ console.log(edad(18));
 // ● Cree una función flecha que tenga como parámetros dos números y retorne el producto de éstos,
 // imprima el valor devuelto por la función. Use paréntesis para agrupar los parámetros, no use la palabra
 // reservada return.
+const producto =(first:number, second:number):number=> first/second;
+console.log(producto(15, 8));
 
 
 // ● Cree una función flecha que tenga como parámetros dos números y retorne el módulo de éstos, imprima
 // el valor devuelto por la función. La función debe tener dos instrucciones, una donde se declare e inicialice
 // la variable módulo que contendrá el módulo de los dos números y la otra donde se retorne la variable
 // módulo. Use paréntesis para agrupar los parámetros, use llaves para agrupar las dos instrucciones.
+const modulo = (first:number, second:number):number=>{
+  const modulo:number = first%second;
+  return modulo;
+}
 
-
+console.log(modulo(15, 0.497));
