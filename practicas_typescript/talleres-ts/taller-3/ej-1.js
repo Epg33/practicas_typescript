@@ -3,14 +3,14 @@
 // programadores, hacemos mover el mundo”, de tal manera que en su .then, se imprima tal string mediante
 // console.log
 let saludo = new Promise((resolve) => {
-    const cadena = 'Somos programadores, hacemos mover el mundo';
+    const cadena = "Somos programadores, hacemos mover el mundo";
     resolve(cadena);
 }).then((res) => console.log(res));
 // ● Cree y ejecute una promesa que siempre se rechace, y que lo haga con un string “Ha ocurrido un error
 // desconocido.”, de tal manera que en su .catch, se imprima tal string mediante console.log
 let error = new Promise((resolve, reject) => {
-    reject('Ha ocurrido un error desconocido');
-}).catch(err => console.log(err));
+    reject("Ha ocurrido un error desconocido");
+}).catch((err) => console.log(err));
 // ● La entrega de subsidios en una institución pública depende de si el estrato de la persona es menor o igual
 // a 2. Cree un programa que implemente una variable que guarde el estrato del usuario, y mediante la
 // evaluación de tal variable, muestre si el usuario tiene derecho o no a un subsidio usando promesas, de tal
@@ -33,17 +33,38 @@ const estrato = (estrato) => {
                 }
             }
             else {
-                reject('ingrese un estrato valido');
+                reject("ingrese un estrato valido");
             }
         }
-    }).then(res => console.log(res))
-        .catch(err => console.log(err));
+    })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
 };
-estrato('xd');
+estrato("xd");
 // ● Cree una promesa que implemente 4 métodos .then en cadena de tal manera que la promesa se
 // resuelva inicialmente con el valor 2 <resolve(2)> y los siguientes métodos .then eleven al
 // cuadrado el valor pasado, imprimiendo al final el mensaje “el valor final es: X” donde x es el
 // resultado final del encadenamiento
+let potencia = new Promise((resolve) => {
+    const X = 2;
+    resolve(X);
+})
+    .then((res) => {
+    const X = Number(res) ** 2;
+    return X;
+})
+    .then((res) => {
+    const X = Number(res) ** 2;
+    return X;
+})
+    .then((res) => {
+    const X = Number(res) ** 2;
+    return X;
+})
+    .then((res) => {
+    const X = Number(res) ** 2;
+    console.log("El valor final es: ", X);
+});
 // ● Cree tres promesas promesa1, promesa2 y promesa3, de tal manera que la promesa1 siempre
 // se resuelva con la cadena “Somos ADSI”, que la promesa2 tenga dos opciones, resolverse o
 // rechazarse; de tal forma que si se resuelva lo haga con la cadena “ Somos programadores” ,
