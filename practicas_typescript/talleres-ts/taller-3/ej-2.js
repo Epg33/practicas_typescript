@@ -1,4 +1,3 @@
-"use strict";
 // ● Cree tres promesas promesa1, promesa2 y promesa3, de tal manera que la promesa1 siempre
 // se resuelva con la cadena “Somos ADSI”, que la promesa2 tenga dos opciones, resolverse o
 // rechazarse; de tal forma que si se resuelva lo haga con la cadena “ Somos programadores” ,
