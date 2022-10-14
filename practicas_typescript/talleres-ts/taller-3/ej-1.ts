@@ -2,13 +2,16 @@
 // programadores, hacemos mover el mundo”, de tal manera que en su .then, se imprima tal string mediante
 // console.log
 let saludo = new Promise((resolve)=>{
-  const cadena:string = 'Somosprogramadores, hacemos mover el mundo';
+  const cadena:string = 'Somos programadores, hacemos mover el mundo';
   resolve(cadena)
 }).then((res)=> console.log(res)
 )
 
 // ● Cree y ejecute una promesa que siempre se rechace, y que lo haga con un string “Ha ocurrido un error
 // desconocido.”, de tal manera que en su .catch, se imprima tal string mediante console.log
+let error = new Promise((resolve, reject)=>{
+  reject('Ha ocurrido un error desconocido')
+}).catch(err=>console.log(err))
 
 
 // ● La entrega de subsidios en una institución pública depende de si el estrato de la persona es menor o igual
