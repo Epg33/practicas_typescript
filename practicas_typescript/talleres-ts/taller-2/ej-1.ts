@@ -58,3 +58,22 @@ const modulo = (first:number, second:number):number=>{
 }
 
 console.log(modulo(15, 0.497));
+
+// ●investigue desestructuracion de objetos y de arreglos e implementelos.
+const persona = {
+  ojos: 'negros'
+}
+
+const vehiculo = {
+
+}
+
+const edificio = {
+
+}
+
+const enteros:Array<number> = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const partesPC:Array<string> = ['monitor', 'tarjeta madre', 'gpu', 'cpu', 'fuente', 'ram', 'rom'];
+
+const comida:Array<string> = ['arroz', 'carne','lentejas', 'pollo', 'frijoles', 'platanos', 'bananos', 'pan'];
