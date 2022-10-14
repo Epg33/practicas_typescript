@@ -37,7 +37,8 @@ hiAdsi();
 // ● Cree una función flecha que tenga como parámetro edad y retorne un string que le diga al usuario cuál
 // fue la edad pasada como argumento, imprima el valor devuelto por la función. Use paréntesis para el
 // parámetro y omita la palabra reservada return.
-
+const edad=(age:number):string=> `la edad del usuario es ${age}`
+console.log(edad(18));
 
 
 // ● Cree una función flecha que tenga como parámetros dos números y retorne el producto de éstos,
