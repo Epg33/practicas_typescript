@@ -79,6 +79,38 @@ let potencia = new Promise((resolve) => {
 // retorne la promesa3, y cuando la promesa 3 se cumpla imprima desde su .then el mensaje con
 // el que se resolvió. Implemente .catch para manejar el error que puede ocurrir en la promesa2, en
 // caso de que ocurra el rechazo, imprima el mensaje del error mediante err.message.
+const encadenar = (estado: boolean) => {
+  let promesa1 = new Promise((resolve) => {
+    const mensaje: string = "Somos ADSI";
+    resolve(mensaje);
+  }).then((res) => {
+    console.log(res);
+
+    let promesa2 = new Promise((resolve, reject) => {
+      if (estado) {
+        const mensaje: string = "Somos programadores";
+        resolve(mensaje);
+      } else {
+        reject("Promesa 2 no cumplida");
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        let promesa3 = new Promise((resolve) => {
+          const mensaje: string = "Hacemos mover el mundo";
+          resolve(mensaje);
+        }).then((res) => console.log(res));
+        return promesa3;
+      })
+      .catch((err) => console.log(err));
+
+    return promesa2;
+  });
+
+  return promesa1;
+};
+
+encadenar(true);
 
 // ● Cree una promesa cuyo resolve y reject dependan cada uno de una llamada asíncrona usando
 // setTimeout y así, su rechazo o resolución dependerá del proceso asíncrono que termine
