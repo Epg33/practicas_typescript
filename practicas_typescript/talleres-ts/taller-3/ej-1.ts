@@ -24,7 +24,26 @@ let error = new Promise((resolve, reject)=>{
 // el .catch de la promesa de la siguiente manera: console.log('Ha ocurrido un error: ', err.message),
 // tenga en cuenta que err, es la información del error(motivo de rechazo) que se pasa desde el
 // reject al catch como parámetro de nombre err.
+const estrato = (estrato:any) =>{
+let subsidio = new Promise((resolve, reject)=>{
+  if(estrato){
+    if (estrato>0 && estrato<6){
+      if (estrato<=2){
+        resolve(`tiene derecho a subsidio por ser estrato ${estrato}`)
+      }
+      else {
+        resolve(`no tiene derecho a subsidio por ser de estrato ${estrato}`)
+      }
+    } else{
+      reject('ingrese un estrato valido')
+    }
+  }
+}
+).then(res=>console.log(res))
+.catch(err=>console.log(err)
+)}
 
+estrato('xd');
 
 // ● Cree una promesa que implemente 4 métodos .then en cadena de tal manera que la promesa se
 // resuelva inicialmente con el valor 2 <resolve(2)> y los siguientes métodos .then eleven al
