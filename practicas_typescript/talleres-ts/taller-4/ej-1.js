@@ -39,6 +39,7 @@ const cuadradoAsincrono = () => __awaiter(void 0, void 0, void 0, function* () {
     const number = yield resultado();
     const formatting = Number(number);
     const result = formatting ** 2;
+    console.log(result);
     return result;
 });
 console.log(cuadradoAsincrono());
