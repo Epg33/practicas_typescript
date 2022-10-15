@@ -24,5 +24,38 @@ honda.descripcion();
 // ● Cree e instancie una clase robot con dos métodos no estáticos y dos estáticos, cuatro propiedades, dos
 // públicas y dos privadas, dos deben ser pasadas al constructor, las otras dos, deben ser inicializadas
 // dentro de la clase.
+type color = 'azul'|'gris'
+
+class robot {
+    #marca:string='Motoman';
+    #color:color='azul';
+    capacidad:number;
+    activo:boolean;
+    aviableColors(){
+        console.log(`el modelo esta disponible en azul o gris`);
+    }
+    sayBrand (){
+        console.log(`la marca de este robot es ${this.#marca}`);
+    }
+    sayCapacity(){
+        console.log(`este robot puede mover ${this.capacidad} kilos de carga`);
+    }
+    sayIfActive(){
+        this.activo
+        ? console.log('Este robot esta activo y trabajando')
+        : console.log('Este robot esta inactivo');
+    }
+    constructor(capacidad:number, activo:boolean){
+        this.capacidad=capacidad;
+        this.activo=activo;
+    }
+}
+
+const roboto = new robot(120, true);
+roboto.aviableColors();
+roboto.sayBrand();
+roboto.sayCapacity();
+roboto.sayIfActive();
+
 // ● Cree e instancie una clase PC con dos métodos no estáticos y dos estáticos, cuatro propiedades, dos
 // públicas y dos privadas, todas deben ser pasadas al constructor.
