@@ -17,7 +17,7 @@ class coche{
     }
 }
 
-const honda = new coche('honda civic', 2000);
+const honda:coche = new coche('honda civic', 2000);
 honda.speed();
 honda.descripcion();
 
@@ -51,7 +51,7 @@ class robot {
     }
 }
 
-const roboto = new robot(120, true);
+const roboto:robot = new robot(120, true);
 roboto.aviableColors();
 roboto.sayBrand();
 roboto.sayCapacity();
@@ -74,11 +74,10 @@ class PC{
     }
     addingRam(add:number){
         this.#ram+=add
-        console.log(`la capacidad de la ram ahora es ${this.#ram}`);
+        console.log(`la capacidad de la ram ahora es ${this.#ram} GB`);
     }
     components(){
         console.log(`Esta computadora de la mara ${this.marca} cuenta con los siguientes componentes: procesador ${this.#procesador}, grafica ${this.grafica} y ${this.#ram} GB de ram`);
-        
     }
 
     constructor(marca:string, grafica:string, procesador:string, ram:number){
@@ -88,3 +87,9 @@ class PC{
         this.#ram=ram;
     }
 }
+
+const computer:PC = new PC('Asus', 'rtx 3090 ti', 'intel i9 12900k', 32);
+computer.fucntional();
+computer.operaciones();
+computer.addingRam(8);
+computer.components();

@@ -86,3 +86,8 @@ class PC {
     }
 }
 _PC_procesador = new WeakMap(), _PC_ram = new WeakMap();
+const computer = new PC('Asus', 'rtx 3090 ti', 'intel i9 12900k', 32);
+computer.fucntional();
+computer.operaciones();
+computer.addingRam(8);
+computer.components();
