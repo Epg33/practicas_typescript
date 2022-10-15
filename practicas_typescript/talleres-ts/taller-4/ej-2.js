@@ -11,8 +11,6 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _coche_año, _robot_marca, _robot_color, _PC_procesador, _PC_ram;
-// ● Cree e instancie una clase coche con un método no estático y otro estático, dos propiedades, una pública
-// y una privada, ambas deben ser pasadas al constructor.
 class coche {
     constructor(modelo, año) {
         _coche_año.set(this, void 0);
@@ -60,8 +58,6 @@ roboto.aviableColors();
 roboto.sayBrand();
 roboto.sayCapacity();
 roboto.sayIfActive();
-// ● Cree e instancie una clase PC con dos métodos no estáticos y dos estáticos, cuatro propiedades, dos
-// públicas y dos privadas, todas deben ser pasadas al constructor.
 class PC {
     constructor(marca, grafica, procesador, ram) {
         _PC_procesador.set(this, void 0);

@@ -45,5 +45,9 @@ console.log(cuadradoAsincrono());
 // a) ¿Qué cláusula usamos para que una función retorne una promesa sin crearla explícitamente
 // dentro de la función ?
 
+
 // b) Si necesitamos capturar el valor de una promesa, ¿ qué cláusula usamos ?
+/*se utiliza la palababra clave return*/
+
 // c) ¿Cuál es la condición para poder usar la cláusula await ?
+/*declarar la funcion como asincrona utilizando la palabra clave async*/

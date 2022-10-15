@@ -1,4 +1,3 @@
-// ● Una variable tipo objeto cuyos valores sean los días de la semana
 const weekDays = {
     firstDay: "lunes",
     secondDay: "martes",
@@ -8,7 +7,6 @@ const weekDays = {
     sixthDay: "sabado",
     seventhDay: "domingo",
 };
-// ● Una variable tipo objeto cuyos valores sean los números del 0 al 9
 const numbers = {
     0: 0,
     1: 1,
@@ -21,7 +19,6 @@ const numbers = {
     8: 8,
     9: 9,
 };
-// ● Recorra cada objeto creado usando for-in e imprimiendo cada uno de sus valores
 let days = Object.values(weekDays);
 for (let day in weekDays) {
     console.log(weekDays[day]);
@@ -29,9 +26,6 @@ for (let day in weekDays) {
 for (let number in numbers) {
     console.log(number);
 }
-// Investigue: cómo eliminar elementos clave-valor de un objeto, cómo leer y actualizar valores. Implemente ejemplos prácticos.
-//eliminar
-// Investigue: Ciclos for y while en TypeScript. Implemente ejemplos prácticos
 for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0) {
         if (i % 3 === 0 && i % 5 === 0) {
