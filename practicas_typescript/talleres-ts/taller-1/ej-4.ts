@@ -36,6 +36,10 @@ for (let number in numbers) {
 // Investigue: cómo eliminar elementos clave-valor de un objeto, cómo leer y actualizar valores. Implemente ejemplos prácticos.
 //eliminar
 
+delete weekDays.firstDay;
+console.log(weekDays);
+
+
 // Investigue: Ciclos for y while en TypeScript. Implemente ejemplos prácticos
 
 for (let i: number = 1; i <= 100; i++) {
