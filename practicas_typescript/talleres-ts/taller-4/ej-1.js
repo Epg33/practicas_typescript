@@ -21,20 +21,29 @@ console.log(square(5));
 // segundos para resolverse con valor 8. Luego, llame a la función e imprima su resultado, ¿qué resultado
 // obtiene? ¿una promesa?, ¿ un entero ?
 const resultado = () => __awaiter(void 0, void 0, void 0, function* () {
-    const operation = new Promise((resolve, reject) => {
-        const operation = 2 * Math.sqrt(2 * 2);
-        resolve(operation);
-    }).then(operation => {
-        return operation;
+    return yield new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const operation = 2 * Math.sqrt(2 * 2);
+            resolve(operation);
+        }, 6000);
+    }).then((res) => {
+        console.log(res);
+        return Number(res);
     });
-    const result = yield operation;
-    return result;
 });
 console.log(resultado());
 // ● Cree una función llamada “cuadradoAsincrono” que llame en su bloque de instrucciones a la función
 // “resultado” de tal manera que la ejecución se detenga hasta obtener el valor retornado por “resultado”,
 // luego, eleve tal valor al cuadrado y este sea impreso. Use Async - Await. ¿ Qué imprimió ? ¿una
 // promesa?, ¿ un entero ?
+const cuadradoAsincrono = () => __awaiter(void 0, void 0, void 0, function* () {
+    const number = yield resultado();
+    const formatting = Number(number);
+    console.log(formatting);
+    const result = formatting ** 2;
+    return result;
+});
+console.log(cuadradoAsincrono());
 // ● Responda:
 // a) ¿Qué cláusula usamos para que una función retorne una promesa sin crearla explícitamente
 // dentro de la función ?
