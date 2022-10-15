@@ -10,7 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
-var _coche_año, _robot_marca, _robot_color;
+var _coche_año, _robot_marca, _robot_color, _PC_procesador, _PC_ram;
 // ● Cree e instancie una clase coche con un método no estático y otro estático, dos propiedades, una pública
 // y una privada, ambas deben ser pasadas al constructor.
 class coche {
@@ -40,7 +40,7 @@ class robot {
         this.activo = activo;
     }
     aviableColors() {
-        console.log(`el modelo esta disponible en azul o gris`);
+        console.log(`el modelo esta disponible en ${__classPrivateFieldGet(this, _robot_color, "f")} o gris`);
     }
     sayBrand() {
         console.log(`la marca de este robot es ${__classPrivateFieldGet(this, _robot_marca, "f")}`);
@@ -62,3 +62,27 @@ roboto.sayCapacity();
 roboto.sayIfActive();
 // ● Cree e instancie una clase PC con dos métodos no estáticos y dos estáticos, cuatro propiedades, dos
 // públicas y dos privadas, todas deben ser pasadas al constructor.
+class PC {
+    constructor(marca, grafica, procesador, ram) {
+        _PC_procesador.set(this, void 0);
+        _PC_ram.set(this, void 0);
+        this.marca = marca;
+        this.grafica = grafica;
+        __classPrivateFieldSet(this, _PC_procesador, procesador, "f");
+        __classPrivateFieldSet(this, _PC_ram, ram, "f");
+    }
+    fucntional() {
+        console.log('esta computadora es funcional desde hace 2 años');
+    }
+    operaciones() {
+        console.log('Esta computadora es capaz de realizar 500 millones de operaciones por segundo');
+    }
+    addingRam(add) {
+        __classPrivateFieldSet(this, _PC_ram, __classPrivateFieldGet(this, _PC_ram, "f") + add, "f");
+        console.log(`la capacidad de la ram ahora es ${__classPrivateFieldGet(this, _PC_ram, "f")}`);
+    }
+    components() {
+        console.log(`Esta computadora de la mara ${this.marca} cuenta con los siguientes componentes: procesador ${__classPrivateFieldGet(this, _PC_procesador, "f")}, grafica ${this.grafica} y ${__classPrivateFieldGet(this, _PC_ram, "f")} GB de ram`);
+    }
+}
+_PC_procesador = new WeakMap(), _PC_ram = new WeakMap();

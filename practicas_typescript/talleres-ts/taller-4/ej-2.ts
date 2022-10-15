@@ -32,7 +32,7 @@ class robot {
     capacidad:number;
     activo:boolean;
     aviableColors(){
-        console.log(`el modelo esta disponible en azul o gris`);
+        console.log(`el modelo esta disponible en ${this.#color} o gris`);
     }
     sayBrand (){
         console.log(`la marca de este robot es ${this.#marca}`);
@@ -59,3 +59,32 @@ roboto.sayIfActive();
 
 // ● Cree e instancie una clase PC con dos métodos no estáticos y dos estáticos, cuatro propiedades, dos
 // públicas y dos privadas, todas deben ser pasadas al constructor.
+
+class PC{
+    marca:string;
+    grafica:string;
+    #procesador:string;
+    #ram:number;
+
+    fucntional(){
+        console.log('esta computadora es funcional desde hace 2 años');
+    }
+    operaciones(){
+        console.log('Esta computadora es capaz de realizar 500 millones de operaciones por segundo');
+    }
+    addingRam(add:number){
+        this.#ram+=add
+        console.log(`la capacidad de la ram ahora es ${this.#ram}`);
+    }
+    components(){
+        console.log(`Esta computadora de la mara ${this.marca} cuenta con los siguientes componentes: procesador ${this.#procesador}, grafica ${this.grafica} y ${this.#ram} GB de ram`);
+        
+    }
+
+    constructor(marca:string, grafica:string, procesador:string, ram:number){
+        this.marca=marca;
+        this.grafica=grafica;
+        this.#procesador=procesador;
+        this.#ram=ram;
+    }
+}
