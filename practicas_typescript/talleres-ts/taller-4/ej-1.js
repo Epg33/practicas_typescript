@@ -12,9 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // promesa usando Async para ello. Luego, llame a la función y trate de imprimir su valor de retorno. ¿Cuál
 // es el resultado de la impresión? ¿un valor numérico ? ¿una promesa ?
 const square = (number) => __awaiter(void 0, void 0, void 0, function* () {
-    let result = new Promise(resolve => {
-        resolve(number ** 2);
-    }).then(number => { return number; });
+    const result = number ** 2;
     return result;
 });
 console.log(square(5));
@@ -22,6 +20,17 @@ console.log(square(5));
 // manera que la promesa en su bloque de instrucciones implemente setTimeout demorandose seis
 // segundos para resolverse con valor 8. Luego, llame a la función e imprima su resultado, ¿qué resultado
 // obtiene? ¿una promesa?, ¿ un entero ?
+const resultado = () => __awaiter(void 0, void 0, void 0, function* () {
+    const operation = new Promise((resolve, reject) => {
+        const operation = 2 * Math.sqrt(2 * 2);
+        resolve(operation);
+    }).then(operation => {
+        return operation;
+    });
+    const result = yield operation;
+    return result;
+});
+console.log(resultado());
 // ● Cree una función llamada “cuadradoAsincrono” que llame en su bloque de instrucciones a la función
 // “resultado” de tal manera que la ejecución se detenga hasta obtener el valor retornado por “resultado”,
 // luego, eleve tal valor al cuadrado y este sea impreso. Use Async - Await. ¿ Qué imprimió ? ¿una
