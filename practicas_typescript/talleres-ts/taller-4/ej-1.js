@@ -27,7 +27,6 @@ const resultado = () => __awaiter(void 0, void 0, void 0, function* () {
             resolve(operation);
         }, 6000);
     }).then((res) => {
-        console.log(res);
         return Number(res);
     });
 });
@@ -39,7 +38,6 @@ console.log(resultado());
 const cuadradoAsincrono = () => __awaiter(void 0, void 0, void 0, function* () {
     const number = yield resultado();
     const formatting = Number(number);
-    console.log(formatting);
     const result = formatting ** 2;
     return result;
 });

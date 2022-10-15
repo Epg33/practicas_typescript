@@ -19,7 +19,6 @@ const resultado = async (): Promise<number> => {
       resolve(operation);
     }, 6000);
   }).then((res) => {
-    console.log(res);
     return Number(res);
   });
 };
@@ -34,6 +33,8 @@ const cuadradoAsincrono = async () => {
   const number = await resultado();
   const formatting = Number(number)
   const result = formatting**2;
+  console.log(result);
+  
   return result
 };
 
