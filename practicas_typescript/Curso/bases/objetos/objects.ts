@@ -1,18 +1,14 @@
-(()=>{
-
-  let flash = {
-    name: 'Barry Allen',
+(() => {
+  let flash:{ name:string, age:number, powers:string[], getName?:()=>string } = {
+    name: "Barry Allen",
     age: 24,
-    powers: ['Super velocidad', 'Viajar en el tiempo']
-  }
+    powers: ["Super velocidad", "Viajar en el tiempo"],
+  };
 
-  flash = {
-    name : 'Clark Kent',
+  let superMan:{ name:string, age:number, powers:string[], getName?:()=>string } = {
+    name: "Clark Kent",
     age: 60,
-    powers: ['Super fuerza']
-    getNombre(){
-      return this.name
-    }
-  }
+    powers: ["Super velocidad"],
+  };
 
-})()
+})();
