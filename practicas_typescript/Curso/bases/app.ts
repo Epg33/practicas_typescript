@@ -1,78 +1,82 @@
-type Auto = {
-  carroceria: string;
-  modelo: string;
-  antibalas: boolean;
-  pasajeros: number;
-  disparar?: () => void;
-};
+(()=> {
 
-type Villano = {
-  nombre: string;
-  edad: number | undefined;
-  mutante: boolean;
-};
+  type Auto = {
+    carroceria: string;
+    modelo: string;
+    antibalas: boolean;
+    pasajeros: number;
+    disparar?: () => void;
+  };
 
-type Charles = {
-  poder: string;
-  estatura: number;
-};
-type Apocalipsis = {
-  lider: boolean;
-  miembros: string[];
-};
+  type Villano = {
+    nombre: string;
+    edad: number | undefined;
+    mutante: boolean;
+  };
 
-// Objetos
-const batimovil: Auto = {
-  carroceria: "Negra",
-  modelo: "6x6",
-  antibalas: true,
-  pasajeros: 4,
-};
+  type Charles = {
+    poder: string;
+    estatura: number;
+  };
+  type Apocalipsis = {
+    lider: boolean;
+    miembros: string[];
+  };
 
-const bumblebee: Auto = {
-  carroceria: "Amarillo con negro",
-  modelo: "4x2",
-  antibalas: true,
-  pasajeros: 4,
-  disparar() {
-    // El metodo disparar es opcional
-    console.log("Disparando");
-  },
-};
+  // Objetos
+  const batimovil: Auto = {
+    carroceria: "Negra",
+    modelo: "6x6",
+    antibalas: true,
+    pasajeros: 4,
+  };
 
-// Villanos debe de ser un arreglo de objetos personalizados
-const villanos: Villano[] = [
-  {
-    nombre: "Lex Luthor",
-    edad: 54,
-    mutante: false,
-  },
-  {
-    nombre: "Erik Magnus Lehnsherr",
-    edad: 49,
-    mutante: true,
-  },
-  {
-    nombre: "James Logan",
-    edad: undefined,
-    mutante: true,
-  },
-];
+  const bumblebee: Auto = {
+    carroceria: "Amarillo con negro",
+    modelo: "4x2",
+    antibalas: true,
+    pasajeros: 4,
+    disparar() {
+      // El metodo disparar es opcional
+      console.log("Disparando");
+    },
+  };
 
-// Multiples tipos
-// cree dos tipos, uno para charles y otro para apocalipsis
-const charles: Charles = {
-  poder: "psiquico",
-  estatura: 1.78,
-};
+  // Villanos debe de ser un arreglo de objetos personalizados
+  const villanos: Villano[] = [
+    {
+      nombre: "Lex Luthor",
+      edad: 54,
+      mutante: false,
+    },
+    {
+      nombre: "Erik Magnus Lehnsherr",
+      edad: 49,
+      mutante: true,
+    },
+    {
+      nombre: "James Logan",
+      edad: undefined,
+      mutante: true,
+    },
+  ];
 
-const apocalipsis: Apocalipsis = {
-  lider: true,
-  miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"],
-};
+  // Multiples tipos
+  // cree dos tipos, uno para charles y otro para apocalipsis
+  const charles: Charles = {
+    poder: "psiquico",
+    estatura: 1.78,
+  };
 
-// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
-let mystique: Charles | Apocalipsis;
+  const apocalipsis: Apocalipsis = {
+    lider: true,
+    miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"],
+  };
 
-mystique = charles;
-mystique = apocalipsis;
+  // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+  let mystique: Charles | Apocalipsis;
+
+  mystique = charles;
+  mystique = apocalipsis;
+
+})()
