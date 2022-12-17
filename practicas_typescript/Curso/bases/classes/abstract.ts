@@ -23,7 +23,7 @@
   // console.log(wolverine.salvarMundo())
   // console.log(Magneto.consquistarMundo())
   const printName = (character: Mutante):void => {
-    console.log(character.realName)
+    // console.log(character.realName)
   }
 
   printName(wolverine)
