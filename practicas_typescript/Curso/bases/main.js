@@ -1,5 +1,29 @@
 "use strict";
 (() => {
+    class Mutante {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+    }
+    class Xmen extends Mutante {
+        salvarMundo() {
+            return 'Mundo a salvo';
+        }
+    }
+    class Villian extends Mutante {
+        consquistarMundo() {
+            return 'Mundo conquistado';
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan');
+    const Magneto = new Villian('Magneto', 'Magnus');
+    const printName = (character) => {
+        console.log(character.realName);
+    };
+    printName(wolverine);
+})();
+(() => {
     class Avenger {
         constructor(name, team, realName) {
             this.name = name;
@@ -22,7 +46,6 @@
         constructor(name, realName) {
             this.name = name;
             this.realName = realName;
-            console.log("Constructor avenger llamado");
         }
         getFullName() {
             return `${this.name} ${this.realName}`;
@@ -32,14 +55,19 @@
         constructor(name, realName, isMutant) {
             super(name, realName);
             this.isMutant = isMutant;
-            console.log('Constructor Xmen Llamado');
+        }
+        get fullName() {
+            return `${this.name} - ${this.realName}`;
+        }
+        set fullName(name) {
+            if (name.length < 3) {
+                throw new Error('el nombre debe ser mayor a tres caracteres');
+            }
+            this.name = name;
         }
         getFullNameFromXmen() {
-            console.log(super.getFullName());
         }
     }
     const wolverine = new Xmen("Wolverine", "Logan", true);
-    console.log(wolverine);
-    wolverine.getFullNameFromXmen();
 })();
 //# sourceMappingURL=main.js.map
