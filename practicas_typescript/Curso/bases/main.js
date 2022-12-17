@@ -22,7 +22,27 @@ var __rest = (this && this.__rest) || function (s, e) {
         var { ironMan } = _a, rest = __rest(_a, ["ironMan"]);
         console.log(ironMan, rest);
     };
-    printAvenger(avengers);
+    const avengerArr = ['Cap. America', true, 150.15];
+    const [capi, ironMan,] = avengerArr;
+    console.log({ ironMan, capi });
+})();
+(() => {
+    const ironman = {
+        name: 'Ironman',
+        weapon: 'Armorsuit'
+    };
+    const capitanAmerica = {
+        name: 'Capitan America',
+        weapon: 'Escudo'
+    };
+    const thor = {
+        name: 'Thor',
+        weapon: 'Mjolnir'
+    };
+    const avengers = [ironman, thor, capitanAmerica];
+    for (const avenger of avengers) {
+        console.log(avenger.name, avenger.weapon);
+    }
 })();
 (() => {
     const NOMBRE = 'Ethiem';

@@ -23,6 +23,11 @@
     console.log(ironMan, rest);
   }
 
-  printAvenger(avengers);
+  // printAvenger(avengers);
+
+  const avengerArr:any[] = ['Cap. America', true, 150.15];
+
+  const [ capi, ironMan, ] = avengerArr;
+  console.log({ironMan, capi})
 
 })();
